@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Days Until Vikes Lose to Pack</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+  <center><h1>Days Until the Packers Beat the Vikings</h1></center>
+  <center><h1 id='days-until'></h1></center>
+
+
+
+  <script>
+  var today=new Date();
+  var game=new Date(today.getFullYear(), 9, 15);
+  var one_day=1000*60*60*24;
+  (Math.ceil((game.getTime()-today.getTime())/(one_day)));
+  $("#days-until").html((Math.ceil((game.getTime()-today.getTime())/(one_day))));
+  </script>
+
+</body>
+
+</html>
